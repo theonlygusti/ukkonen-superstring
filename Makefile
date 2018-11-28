@@ -9,15 +9,15 @@ DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
 OBJ=main.o
 
+EXE=main
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 main: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
-	make clean
+	$(CC) -o $(EXE) $^ $(CFLAGS)
 
 .PHONY: clean
 
 clean:
-	rm -f *.o *~ core $(INCDIR)/*~
+	rm -f $(EXE) *.o *~ core $(INCDIR)/*~
