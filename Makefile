@@ -9,12 +9,12 @@ DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
 OBJ=main.o
 
-EXE=shortest_common_superstring
+EXE=ukksupstr
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-shortest_common_superstring: $(OBJ)
+ukksupstr: $(OBJ)
 	$(CC) -o $(EXE) $^ $(CFLAGS)
 
 .PHONY: clean
