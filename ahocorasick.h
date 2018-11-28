@@ -1,3 +1,3 @@
 #pragma once
 
-// support multithread
+#include "trie.h"
