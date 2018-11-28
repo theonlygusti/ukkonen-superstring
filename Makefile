@@ -9,7 +9,7 @@ DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
 OBJ=main.o
 
-EXE=main
+EXE=shortest_common_superstring
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
