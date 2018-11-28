@@ -4,7 +4,7 @@ CFLAGS=-I$(IDIR)
 
 ODIR=obj
 
-_DEPS=superstring.h
+_DEPS=superstring.h ahocorasick.h
 DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
 OBJ=main.o
