@@ -14,7 +14,7 @@ EXE=main
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-main: $(OBJ)
+shortest_common_superstring: $(OBJ)
 	$(CC) -o $(EXE) $^ $(CFLAGS)
 
 .PHONY: clean
